@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+   // als var tekst is "foo", print dan foobar uit en print anders "bar" + tekst //
+
+
+   var tekst = "test";
+   if (tekst == "foo") {
+    console.log("foobar")
+  } else {
+   console.log("bar" + tekst)
+  }
+  // one line code //
+var tekst = "foo";
+var tekst = (tekst === "foo") ? console.log("foobar") : console.log("bar" + tekst);
+   
+   // " ik heb een foo gekregen" //
+   // " ik heb een foobar gekregen" //
+
+   var str = "ik heb een foo gekregen";
+   var array = str.split(" ");
+   
+   for (var i = 0; i < array.length; i++){
+       if (array[i] === "foo"){
+          array[i] = "foobar";
+          
+       }
+       
+   }
+console.log(array.join(" "))
+
+
+
+   </script> 
+
+
+
+
+
+</body>
+</html>

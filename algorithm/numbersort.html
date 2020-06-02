@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Kijk of index[0] kleiner is dan index[1] als het waar is swap //
+        // zolang index van array.lenght niet bereikt is, check huidige index met i++//
+        // als wij voor allen elementen gecheckt hebbem, klaar //
+
+        var Arr = [2, 5, 7, 6, 8, 1];
+        var Done = false;
+        while (!Done) {
+            for (var i = 0; i < Arr.length; i++) {
+
+                if (Arr[i] < Arr[i + 1] ) {
+                    var tmp = Arr[i];
+                    Arr[i] = Arr[i + 1];
+                    Arr[i + 1] = tmp;
+                    Done = false;
+                    break;
+                }
+                Done = true;
+            }
+        }
+        console.log(Arr)
+    </script>
+</body>
+
+</html>

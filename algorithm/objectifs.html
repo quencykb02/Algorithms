@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+var person1 = {firstname:"john", lastname:"smit", age:34};
+var person2 = {firstname:"bruce", lastname:"lee", age:28};
+var person3 = {firstname:"mo", lastname:"ali", age:70};
+var person4 = {firstname:"john", lastname:"luuk", age:14};
+var person5 = {firstname:"luuk", lastname:"skywalker", age:18};
+
+// for(var age in person1){
+//     if(person2.age < 30){
+//      console.log(person2)
+//     }
+// }
+function personAge(x){
+    if(x.age < 30){
+       console.log(x) 
+    }
+}
+
+personAge(person4)
+personAge(person2)
+
+
+</script>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>problem 14 </title>
+</head>
+<body>
+    
+</body>
+<script>
+    // Maak een functie positive integers
+    // Maak een var number aan met waarde 13;
+    // een if statement 
+    // als 13 % res waarde 0 is dan voer je het uit 
+    // else voer je 13 x 3 + 1 uit 
+    // en dat telkens tot dat je op 1 eindigt 
+
+    var LCSarray;
+    var array_getal = 0;
+
+    function CollatzSequence(getal){
+    var tempgetal = getal;
+    var array = [];
+    array.push(tempgetal);
+    for(i=1;i>0;i++){
+        if(tempgetal%2==0){
+            tempgetal = tempgetal/2;
+            array.push(tempgetal);
+    }
+    else{
+        tempgetal = tempgetal*3+1;
+        array.push(tempgetal);
+    }
+    if(tempgetal == 1){
+        if(array.length > LCSarray.length){
+            LCSarray = array;
+            array_getal = getal;
+        }
+        return array;
+    }}}
+    function longest_chain(num) {
+  var max = 0;
+  var max_index;
+    
+  for(var i=1; i<num; i++) {
+    var sequence = CollatzSequence(i);
+    if(sequence > max) {
+      max = sequence;
+      max_index = i;
+    }
+  }
+  return max_index;
+}console.log(CollatzSequence(13))
+console.log(longest_chain(1000000))
+    
+
+</script>
+
+
+</html>

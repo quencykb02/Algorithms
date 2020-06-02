@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>problem12</title>
+</head>
+<body>
+    
+</body>
+<script>
+// Maak een functie aan met parameter voor de triangle getallen
+// Vervolgens een for loop
+// In de loop een var i met waarde 1;
+// in de loop vervolgens zolang i kleiner dan de parameter is blijf loopen
+// geef de waarde parameter 10 dus tot 10.
+// Maak een nieuwe loop
+// Met zolang i kleiner is dan de triangle getal is blijf loopen 
+// Dan deel triangle door i
+// Elke keer dat de res waarde === 0 is total +1
+// Wanneer total meer dan 5x res waarde === 0 is dan stoppen.
+// Het antwoord in een variable zetten.
+// console.log
+// Klaar bitch
+
+
+
+function getFactors(number){
+    var factors = [];
+    
+    var possibleFactor = 1;
+    var sqrt = Math.sqrt(number);
+    while(possibleFactor <= sqrt){
+        if(number % possibleFactor == 0){
+            factors[factors.length] = possibleFactor;
+            
+            var otherPossibleFactor = number / possibleFactor;
+            if(otherPossibleFactor > possibleFactor){
+                factors[factors.length] = otherPossibleFactor;
+            } 
+        }
+        possibleFactor++;
+    }
+    
+    return factors;
+}
+
+function getTriangleNumberWithMoreThanNFactors(n){
+    var counter = 1;
+    var triangleNumber = counter++;
+    while(getFactors(triangleNumber).length < n){
+        triangleNumber += counter++;
+    }
+    return triangleNumber;
+}
+
+console.log(getTriangleNumberWithMoreThanNFactors(5));
+
+</script>
+</html>

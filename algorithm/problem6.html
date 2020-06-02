@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>problem 6</title>
+</head>
+<body>
+
+</body>
+<script>
+    // 1 sum quare
+// Maak een var array aan met alle nummers die je wilt berekenen 
+// Maak een var i aan met waarde 0 
+// Maak een for loop aan 
+// Zorg er voor dat je alle nummers een voor een vermenigvuldigt door zichzelf.
+// Zorg dat de uitkomst steeds bij elkaar word opgetelt.
+// console log
+   // 2 square sum
+// Maak een var met nummers van 1 tot 10 
+// Maak een var i aan met waarde 0 
+// Maak een for loop aan 
+// Zorg er voor dat alle nummers bij elkaar word opgetelt
+// Vervolgens zorg er voor dat het uit komst doorzichzelf word vermeningvuldigt
+// Console log
+
+squareSumDiff(100);
+function squareSumDiff(n){
+var sum = 0;
+var square = 0;
+var diff = 0;
+
+for(var i = 0; i <= n; i++){
+square += i * i;
+sum += i;
+ 
+}
+sum = sum * sum;
+diff = sum - square;
+console.log(diff)
+
+}
+
+</script>
+</html>

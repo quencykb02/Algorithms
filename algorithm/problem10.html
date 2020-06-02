@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>problem 10</title>
+</head>
+<body>
+    
+</body>
+<script>
+// Je hebt een lijst met alle priemgetallen onder de 10 
+// Zorg dat je alles wat in die lijst bij elkaar word opgetelt
+// Console log
+var listOfPrimes = [];
+function addToList(number){
+for(var i = 2; i <= number; i++){
+    if(isPrime(i)){
+        listOfPrimes.push(i);
+    }
+}
+// sum of priemgetallen onder de 10.000 bij elkaar op getelt
+var sum = 0;
+
+for(var i =0; i < listOfPrimes.length; i++){
+    sum += listOfPrimes[i];
+}
+console.log(sum)
+
+}
+// einde van sum of priemgetallen onder de 10.000 bij elkaar op getelt
+function isPrime(number){
+for(var i =2; i< number; i++){
+    if(number % i == 0){
+        return false;
+    }
+}
+return true;
+}
+addToList(10000);
+console.log(listOfPrimes);
+
+</script>
+</html>

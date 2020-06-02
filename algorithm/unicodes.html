@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>unicodes</title>
+</head>
+<style>
+    #button {
+        height: 1.5rem;
+        width: 5rem;
+    }
+    p {
+        color: red;
+        font-weight: bold;
+        font-size: 10rem;
+    }
+</style>
+
+<body id="body">
+    <input type="text" id="myWord">
+    <button onclick="StringToUniCode()" id="button">Click</button>
+    <p id="answer"></p>
+</body>
+<script>
+    // Maak een variable string = 'appel';
+    // Vervolgens split elke letter in de string
+    // Daarna weergeef van elke letter de unicode cijfer
+    // Tel vervolgens al die nummers bij elkaar op
+    // Stop het in een variable
+    // Console.log variable
+    // Klaar
+
+    // var letters = String.fromCharCode(97,112,112,101,108);
+
+
+
+    function StringToUniCode() {
+        var str = document.getElementById("myWord").value;
+        var ans = 0;
+        for (char in str) {
+            ans += str.charCodeAt(char);
+
+        }
+        document.getElementById("answer").innerHTML = ans;
+        document.body.style.backgroundColor = "#" + ans;
+    }
+    
+
+// StringToUniCode();
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>

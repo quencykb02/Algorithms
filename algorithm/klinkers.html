@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>klinkers</title>
+</head>
+<body>
+   
+</body>
+<script>
+   // Maak een functie getvowels met parameter str
+   // Maak een vowelcount met waarde 0
+   // Maak een vaar string aan
+   // Maak een loop met i waarde 0 
+   // Zolang i kleiner of gelijk is aan string lenght blijf loopen
+   // kijk met een if als de string een a of e of i of o of u heeft
+   // vowelscount +1 en bij elkaar optellen steeds.
+   // console.log
+
+function getVowels(str) {
+  var vowelsCount = 0;
+
+  // This converts the string to lowercase
+  var string = str.toLowerCase();
+
+  //loop through the string
+  for (var i = 0; i <= string.length ; i++) {
+
+  //if a vowel, add to vowelscount
+    if (string.charAt(i) == "a" || string.charAt(i) == "e" || string.charAt(i) == "i" || string.charAt(i) == "o" || string.charAt(i) == "u") {
+      vowelsCount += 1;
+    }
+  }
+  return vowelsCount;
+}console.log(getVowels("quency"))
+
+</script>
+</html>

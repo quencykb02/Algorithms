@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // [a,b,c,d,c,b,a,b,b,a,c] //
+        // maak een array met letters aan //
+        // maak var aan met count A count B etc//
+        // maak een loop telkens wanneer letter a word gevonden count A +1 //
+        // zelfde proces bij count B en count C etc //
+        // console.log//
+
+
+        var letters = ['A', 'B', 'C', 'D', 'C', 'B', 'A', 'B', 'B', 'A', 'C', 'Z'];
+        
+        function countLetters(test) {
+            var count = 0;
+
+            for (var i = 0; i < letters.length; i++) {
+                if (letters[i] === test) {
+                    count++
+                }
+            }
+
+            return count;
+        } 
+        console.log(countLetters("A"))
+        
+
+    </script>
+</body>
+
+</html>

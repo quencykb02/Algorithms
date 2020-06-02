@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Priem-getallen</title>
+</head>
+
+<body>
+    <h1>Pseudocode</h1>
+    <ul>
+        <li>maak een variable aan met priemgetal met waarde </li>
+        <li>maak een var i aan met waarde 0</li>
+        <li>maak een if statement</li>
+        <li>kijk of je het getal in "priemgetallen" kan delen door alleen maar 1 of zich zelf.</li>
+        <li>als het kan moet het true zijn</li>
+        <li>als het niet kan moet het false zijn</li>
+        <li>console log</li>
+    </ul>
+    <form name="myform">
+        Enter the number:
+        <input type="text" name=n value="">
+
+        <br><br>
+
+        <input type="button" value="Check" onClick="p()">
+        <br>
+    </form>
+
+</body>
+<script>
+
+// Is dit getal een priem getal?
+// Voeg de priem getallen toe aan een array
+// Is dit getal een priem getal?
+// Wat is een priem getal? --> Getal dat door niets anders dan zichzelf en 1 te in zijn geheel te delen is.
+// 
+// Maak een variabele aan dat het getal voorstelt waarvan we de check doen.
+// Check of dit getal te delen is door een getal lager dan zichzelf en hoger dan 1
+// Als het deel baar is dan een getal lager dan zichzelf en hoger dan 1, is dit geen priem getal
+// Als het niet deel baar is dan een getal lager dan zichzelf en hoger dan 1 dan is het wel een priem getal
+// Voeg de priem getallen toe aan een array
+// Voor alle getallen tot het getal zelf, loop en check voor elk getal of isPrime() true of false is.
+// Als isPrime() true is, voeg toe aan array.
+// Anders, doe niets.
+var listOfPrimes = [];
+function addToList(number){
+for(var i = 2; i <= number; i++){
+    if(isPrime(i)){
+        listOfPrimes.push(i);
+    }
+}
+}
+function isPrime(number){
+    
+for(var i =2; i< number; i++){
+    if(number % i == 0){
+        return false;
+    }
+}
+return true;
+}
+addToList(10);
+console.log(listOfPrimes);
+
+</script>
+
+</html>

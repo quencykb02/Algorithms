@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>problem22</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // Laad de text file in javascript
+    // Sorteer het op alphabetische order
+    // Bereken vervolgens de alfabetische waarde voor elke naam,
+    // Doe de alfabetische waardes keer de index van deze naam
+    // Tel alles bij elkaar op
+    // stop het antwoord in een variable
+    // Console.log
+    scoreNames();
+    function scoreNames() {
+        fetch('names.txt').then((response) => response.text()).then((text) => {
+
+            textArray = text.replace(new RegExp('\"', 'g'), "").split(",").sort();
+            console.log(textArray)
+            var nameScoreResults = 0;
+            for (var i = 0; i < textArray.length; i++) {
+                nameScoreResults += alphabeticalScore(textArray[i]) * (i + 1);
+            }
+console.log(nameScoreResults)
+        });
+    }
+
+    function alphabeticalScore(name) {
+        var sumAlphabeticalScore = 0;
+        for (char in name) {
+            sumAlphabeticalScore += name.charCodeAt(char) - 64;
+        }
+        return sumAlphabeticalScore;
+    }
+// function StringToUniCode() {
+//         var str = document.getElementById("myWord").value;
+//         var ans = 0;
+//         for (char in str) {
+//             ans += str.charCodeAt(char);
+
+//         }
+//         document.getElementById("answer").innerHTML = ans;
+//         document.body.style.backgroundColor = "#" + ans;
+// }
+
+</script>
+
+</html>

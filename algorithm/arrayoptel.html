@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // versie 1//
+        var number = [0, 2, 4, 8, 1, 7, 2, 3, 7, 4, 7, 2, 3, 1, 1, 2, 9];
+        var ans = 0;
+        var arr = [];
+        for (var i = 0; i < number.length; i++) {
+            ans += number[i];
+            if (ans >= 10) {
+                arr.push(ans);
+                ans = 0;
+            }
+        }
+        // versie 2 //
+        var numbers = [1, 2, 4, 8, 1, 7, 2, 3, 7, 4, 7, 2, 3, 1, 1, 2, 9, 13];
+        var uniqueNumbers = [...new Set(numbers)];
+        console.log(uniqueNumbers)
+        var sum = 0;
+
+function counterNumber(getal){
+    var counter = 0;
+    for(var i = 0; i < numbers.length; i++){
+       if(numbers[i] == getal){
+           counter++
+       }
+    }
+    sum += Math.pow(getal,counter);
+   
+}
+
+for(var i = 0; i < uniqueNumbers.length; i++){
+    counterNumber(uniqueNumbers[i]);
+} console.log(sum)
+
+    </script>
+</body>
+
+</html>

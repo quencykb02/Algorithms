@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>problem 16</title>
+</head>
+<body>
+    
+</body>
+<script>
+// 
+// Maak een var number met waarde 2;
+// Maak function aan sumOfDigits
+// Geef de function een parameter i aan 
+// Geef de i waarde van 15
+// vervolgens doe je Math.pow(2,i)
+// vervolgens het uitkomst in een array word gezet
+// en dan bij elkaar word opgetelt.
+// console.log;
+// var number = 2;
+var sum = 0;
+var number = 2;
+var sumDigits = 0;
+function sumOfDigits(i){ // var i = wat het is wanneer het gecalled wordt.
+ sum = Math.pow(number, i); //  2 tot de macht 15 word berekent.
+ 
+var str = sum.toString(); // "123"
+var arr = str.split(''); // ["1", "2", "3"]
+var numberSplit = arr.map(Number); // [1, 2, 3]
+for(i = 0; i < numberSplit.length; i++){ // Hier mee tell ik alles in die var sumdigits bij elkaar op.
+    sumDigits += numberSplit[i];
+    
+}
+console.log(sumDigits)
+}
+
+sumOfDigits(15); // Hier word var i gecalled.
+
+
+</script>
+</html>

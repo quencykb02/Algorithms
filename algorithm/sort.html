@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>sort algorithm</title>
+</head>
+<body>
+    <!--Stappenplan
+    Stap 1: Maak variable numbers aan.
+    Stap 2: array aanmaken
+    Stap 3: Functie maken voor eerste getal
+    Stap 4: kijken of tweede getal groter is dan vorige ja?, zet hem dan ervoor.
+    Stap 5: is de volgende getal groter dan vorige nee?, zet hem dan erachter.
+    Stap 6: is het gesorteert doormiddel van loop.
+    Stap 7: return de var.
+    Stap 8: console.log print(naam var)
+    -->
+</body>
+<script>
+var Arr = [3, 7, 5, 8, 1];
+var Done = false;
+while (!Done) {
+    for (var i = 0; i < Arr.length; i++) {
+        var g1 = Arr[i];
+        var g2 = Arr[i + 1];
+        if (g1 > g2) {
+            var tmp = Arr[i];
+            Arr[i] = Arr[i + 1];
+            Arr[i + 1] = tmp;
+            Done = false;
+            break;
+        }
+        Done = true;
+    }
+}
+console.log(Arr);
+</script>
+</html>

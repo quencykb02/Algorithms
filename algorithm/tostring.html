@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Maak een var array aan met appel, peer, banaan//
+        // maak een loop met var i en array.lenght//
+        // bij elke woord de komma vervangen met een "spatie"//
+        // en bij alle woorden samen voegen in een " " //
+        // console.log //
+
+        var fruits = ['appel', 'peer', 'banaan'];
+        var ans = "";
+        function toString(x) {
+            for (var i = 0; i < fruits.length; i++) {
+                if (i == fruits.length - 1) {
+                    ans += fruits[i];
+
+                } else {
+                    ans += fruits[i] + x;
+                }
+            }
+        }
+
+        toString("/")
+        console.log(ans)
+
+    </script>
+</body>
+
+</html>
